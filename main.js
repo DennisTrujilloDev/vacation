@@ -74,10 +74,20 @@ function editInfo(event){
     let editedLoc = window.prompt("New Location:")
     let editedImg = window.prompt("New Image:")
     let editedNotes = window.prompt("New Notes:")
-    dest.innerText = editedDest
-    loc.innerText = editedLoc
-    img.innerText = editedImg
-    notes.innerText = editedNotes
+    if(editedDest.length){
+        dest.innerText = editedDest
+
+    }
+    if(editedLoc.length){
+        loc.innerText = editedLoc
+    }
+    if(editedImg.length){
+        img.setAttribute("src", editedImg)
+    }
+    if(editedNotes.length){
+        notes.innerText = editedNotes
+
+    }
 
 }
 
