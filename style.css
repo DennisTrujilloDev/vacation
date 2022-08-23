@@ -1,0 +1,31 @@
+#welcome{
+    background-color: lightblue;
+    text-align: center;
+}
+#welcome h1{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+#welcome p{
+    padding-bottom: 10px;
+}
+.indivSection{
+    margin: 20px 5px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: grey;
+    width: 20%;
+}
+img{
+    width: 70%;
+}
+#main{
+    text-align: center;
+    background-color: lightblue;
+}
+
+.deleteBtn, .editBtn{
+    height: 30px;
+    width: 45%;
+    background-color: red;
+}
