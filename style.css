@@ -17,6 +17,8 @@
     width: 20%;
 }
 img{
+    /* height: 50px; */
+    max-height: 70px;
     width: 70%;
 }
 #main{
