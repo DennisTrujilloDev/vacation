@@ -7,7 +7,6 @@ function gatherInfo(event){
 
     let inputOne = document.querySelector("#inputOne")
     let inputTwo = document.querySelector("#inputTwo")
-    // let inputThree = document.querySelector("#inputThree")
     let inputFour = document.querySelector("#inputFour")
     const resultSection = document.querySelector("#result")
     let indivSection = document.createElement("div")
@@ -26,11 +25,11 @@ function gatherInfo(event){
     indivSection.appendChild(pTwo)
 
     const pThree= document.createElement("p")
-    if(!inputFour.value){
-        inputFour.value = ""
-    }else{
+    // if(!inputFour.value){
+    //     inputFour.value = ""
+    // }else{
     pThree.innerText = inputFour.value
-    }
+    // }
     indivSection.appendChild(pThree)
     
     }else{
@@ -63,7 +62,6 @@ function gatherInfo(event){
     }
     grabImage()
 
-    
     const deleteThis = document.createElement("button")
     indivSection.appendChild(deleteThis)
     deleteThis.innerText = "Bye"
@@ -100,12 +98,7 @@ function editInfo(event){
     let editedDest = window.prompt("New Destination:")
     let editedLoc = window.prompt("New Location:")
     let editedNotes = window.prompt("New Notes:")
-    // if(editedDest.length){
-    //     dest.innerText = editedDest
-    // }
-    // if(editedLoc.length){
-    //     loc.innerText = editedLoc
-    // }
+
     if(editedDest.length || editedLoc.length){
         dest.innerText = editedDest
         loc.innerText = editedLoc
@@ -142,31 +135,5 @@ function editInfo(event){
     // https://javascript.info/async
 
     // https://javascript.info/network
-
-    //DONE get rid of photo field in input 
-    //TODO grab dest and loc, pass them both to unsplash or pixabay to grab a random photo using async await 
-
-    //grab dest and loc values 
-        // inputOne inputTwo 
-
-    //create fetch to unsplash
-        
-    ////const ACCESS_KEY = 6Mu2Bt_34N7h0LxSZxajQ_kinxDfLBxQFvufhT9BK9w
-    //let searchTermOne = inputOne.value.trim()
-    //let searchTermTwo = inputTwo.value.trim()
-    //try{
-    //let apiImage= async fetch(`https://api.unsplash.com/search/photos/?client_id=${ACCESS_KEY}&query=${searchTermOne}&query=${searchTermTwo}`)
-    //}catch{
-        //await apiImage.text()
-   // }
-
-
-        //await 
-        //when promise set up, create space for image in original post
-
-
-    //if they edit des or loc, need to change picture 
-    //if you dont get a pic, default pic 
-    //challenge: searchign gifs 
 
         
