@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="welcome">
+<h1>Vacation Destination Wishlist</h1>
+<p>Enter your dream destinations below</p>
+</section>
+
+<section id="main">
+    <div id="header"><h1>Destination Wishlist</h1></div>
+    <div id="userInput">
+        <form action="/grabImage" method="post">
+        <label for="destination">Destination:</label>
+        <input id="inputOne" name="destination" type="text" required>        
+
+        <label for="location">Location:</label>
+        <input name="location" id="inputTwo" type="text" required>
+
+        <label for="notes">Notes:</label>
+        <input name ="notes" id="inputFour" type="text">
+
+        <button type="submit">Submit</button>
+
+        </form>
+    </div>
+</section>
+
+<section id="result">
+    <%for(i=0; i<imgData.length; i++){ %>
+             <section class="container">
+                <p id="destinationName"><%= imgData[i].dest %></p>
+                <p id="locationName"> <%= imgData[i].loc %></p>
+                <% if(imgData[i].responseText.results[0]){ %>
+                    <img class="image" src="<%= imgData[i].responseText.results[0].urls.regular %>">
+                <% }else{ %>
+                    <img class="image" src="https://images.unsplash.com/photo-1589519160732-57fc498494f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d29ybGR8ZW58MHx8MHx8&w=1000&q=80">
+                <% } %>
+                <button class="bye">Bye</button>
+                <button class="edit">Edit</button>
+             </section>
+        <% } %>
+</section>
+
+
+
+<script src="/main.js"></script>
+
+</body>
+</html>
