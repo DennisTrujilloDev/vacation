@@ -1,14 +1,6 @@
-// After making a CRUD API server with just Node, Express & MongoDB 
-// (make sure that your unsplash logic is also there instead of 
-// the front-end, 
-//make sure that your api key is hidden 
-// in a .env file and that file ignored, 
-// and make sure you've handled any Cors issues otherwise 
-// your front-end won't be able to get any data from it),
-//  host that API server on Heroku and refactor 
-//  your vanilla JS front-end to  consume your custom API
 
 // https://youtu.be/5QEwqX5U_2M
+//mongoose crash course 
 const env = require('dotenv').config()
 console.log("acesskey is ", process.env.accessKey);
 
