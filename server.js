@@ -2,9 +2,6 @@
 // https://youtu.be/5QEwqX5U_2M
 //mongoose crash course 
 const env = require('dotenv').config()
-console.log("acesskey is ", process.env.accessKey);
-
-
 const path = require('path')
 const { log } = require('console')
 const express = require('express')
