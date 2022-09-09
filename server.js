@@ -1,12 +1,3 @@
-
-// https://youtu.be/5QEwqX5U_2M
-//mongoose crash course 
-const HEROKU_API_ROOT = "https://vacay-dest.herokuapp.com/"
-// const HEROKU_API_ROOT = "http://localhost:3000"
-
-// Make a request to /GET destinations
-const destinations_url = `${HEROKU_API_ROOT}/destinations`
-
 const env = require('dotenv').config()
 const path = require('path')
 const { log } = require('console')
@@ -60,12 +51,10 @@ MongoClient.connect(connectionString, {
         })
     app.delete('/remove', async function (req, res){
             try{
-                const response = await vacayCollection.deleteOne(
+                await vacayCollection.deleteOne(
                 {dest: req.body.destinationName}, 
-                {loc: req.body.locationName}
-            )
-            console.log(response);
-                res.redirect('/')
+            )                
+            res.redirect('/')
         }catch(err){
             console.log(err);
         }
