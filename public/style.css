@@ -1,37 +1,43 @@
-#welcome{
+#welcome {
     background-color: lightblue;
     text-align: center;
 }
-#welcome h1{
+
+#welcome h1 {
     font-size: 50px;
     margin-bottom: 0;
 }
-#welcome p{
+
+#welcome p {
     padding-bottom: 10px;
 }
-.indivSection{
+
+.indivSection {
     margin: 20px 5px;
     padding: 5px 0;
     text-align: center;
     background-color: grey;
     width: 20%;
 }
-img{
+
+img {
     max-height: 70px;
     width: 70%;
 }
-#main{
+
+#main {
     text-align: center;
     background-color: lightblue;
 }
 
-.deleteBtn, .editBtn{
+.deleteBtn,
+.editBtn {
     height: 30px;
     width: 45%;
     background-color: red;
 }
 
-.container{
+.container {
     height: 200px;
     width: 200px;
     background-color: aquamarine;
@@ -39,7 +45,8 @@ img{
     text-align: center;
 }
 
-.edit, .bye{
+.edit,
+.bye {
     margin: auto;
     width: 30%;
 }
