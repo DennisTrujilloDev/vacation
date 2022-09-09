@@ -1,6 +1,12 @@
 
 // https://youtu.be/5QEwqX5U_2M
 //mongoose crash course 
+const HEROKU_API_ROOT = "https://vacay-dest.herokuapp.com/"
+// const HEROKU_API_ROOT = "http://localhost:3000"
+
+// Make a request to /GET destinations
+const destinations_url = `${HEROKU_API_ROOT}/destinations`
+
 const env = require('dotenv').config()
 const path = require('path')
 const { log } = require('console')
@@ -26,7 +32,7 @@ MongoClient.connect(connectionString, {
     app.use(bodyParser.urlencoded({extended:true}))
     app.use(bodyParser.json())
     app.use(express.static('public'))
-    app.listen(3000, function(){
+    app.listen(process.env.PORT || 3000, function(){
         console.log("listening on 3000");
     })
     app.get('/', function (req, res){
